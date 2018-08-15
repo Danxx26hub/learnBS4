@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  
+  <style>
+    .content { display:none
+    }
+    
+    .preload { 
+      
+      margin:0
+      position:absolute
+      
+    }
+    </style>
+</head>
+<body>
+
+<div class="content"> 
+<div class="container">
+  <h3>Tooltip Example</h3>
+  <p>The data-placement attribute specifies the tooltip position.</p>
+  <a href="#" data-toggle="tooltip" data-placement="top" title="iOS update reports">Top</a>
+  <a href="#" data-toggle="tooltip" data-placement="bottom" title="Hooray!">Bottom</a>
+  <a href="#" data-toggle="tooltip" data-placement="left" title="Hooray!">Left</a>
+  <a href="#" data-toggle="tooltip" data-placement="right" title="Hooray!">Right</a>
+</div>
+  </div>
+  
+
+<br>
+<div class="preload">
+<p class="text-center">loading one moment please...</p>  
+<div class="progress"> 
+<div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 90%">
+  
+    </div>
+</div>
+
+<script>
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();   
+});
+</script>
+ 
+  
+  
+<script>
+$(function() {
+   $(".preload").fadeOut(2100,  function() {
+     $(".content").fadeIn(1100);
+   });
+});
+  
+  </script>
+
+</body>
+</html>
